@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.34de6062.chunk.css",
+    "main.js": "/static/js/main.6655d8b6.chunk.js",
+    "main.js.map": "/static/js/main.6655d8b6.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.1e5123ef.js",
+    "runtime~main.js.map": "/static/js/runtime~main.1e5123ef.js.map",
+    "static/js/2.0fe06381.chunk.js": "/static/js/2.0fe06381.chunk.js",
+    "static/js/2.0fe06381.chunk.js.map": "/static/js/2.0fe06381.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.41769b2851f8a97320f13ced033aabd5.js": "/precache-manifest.41769b2851f8a97320f13ced033aabd5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/static/css/main.34de6062.chunk.css.map",
+    "static/media/Connect4.png": "/static/media/Connect4.7ce93b14.png",
+    "static/media/Glowworm.png": "/static/media/Glowworm.42f8c854.png",
+    "static/media/appLight1.mp4": "/static/media/appLight1.68f40a86.mp4",
+    "static/media/conmanHome.png": "/static/media/conmanHome.b2351847.png",
+    "static/media/conmanIndex.png": "/static/media/conmanIndex.5b756de3.png",
+    "static/media/dodge.gif": "/static/media/dodge.59247faa.gif",
+    "static/media/finale3.mp4": "/static/media/finale3.902ba8bf.mp4",
+    "static/media/googleLight2.mp4": "/static/media/googleLight2.532b43d2.mp4",
+    "static/media/jumbo.jpg": "/static/media/jumbo.396f008d.jpg"
+  }
+}
