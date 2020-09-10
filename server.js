@@ -42,7 +42,7 @@ app.post('/contact', function (req, res) {
     if (error) {
     }
     else {
-      res.redirect('/contact');
+      res.redirect('/');
     }
   });
 });
