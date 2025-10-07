@@ -65,34 +65,6 @@ class Home extends Component {
                     <div class="twinkling"></div>
                 </div>
 
-{/*                 <div class="nav-bar">
-                    <div class="title">
-                        <AnchorLink href='#intro' class="intro">
-                            <img src={mw} class="logo-img" alt="Matt Weinert" />
-                            <div class="name">Matt Weinert </div>
-                            <div class="career">Software Engineer.</div>
-                        </AnchorLink>
-                    </div>
-
-                    <div class="nav">
-                        <AnchorLink href='#about' class="item">About</AnchorLink>
-                        <AnchorLink href='#experience' class="item">Experience</AnchorLink>
-                        <AnchorLink href='#portfolio' class="item">Portfolio</AnchorLink>
-                        <AnchorLink href='#contact' class="item">Contact</AnchorLink>
-                    </div>
-
-                    <ul class="social">
-                        <li>
-                            <a href="https://www.linkedin.com/in/matthew-weinert-37b47b170/" target="_blank"> <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-linkedin-in fa-w-14 fa-5x"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" class=""></path></svg> </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/MattRayWeinert" target="_blank"> <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-github fa-w-16 fa-3x"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class=""></path></svg> </a>
-                        </li>
-
-                        <li class="navbar-line"></li>
-                    </ul>
-                </div> */}
-                
                 <div class="container" style={{width: "100%", justifyContent: "space-evenly"}}>
                     <div class="left">
                             <div class="header" style={{backgroundColor: "rgba(0, 0, 0, 0)"}}>
@@ -112,7 +84,7 @@ class Home extends Component {
                                 <div>
                                     <ul class="social">
                                         <li>
-                                            <a href={resume} target="_blank">
+                                            <a href="https://www.instagram.com/mattthww" target="_blank">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="currentColor" class="h-6 w-6" aria-hidden="true"><path d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.12-75.22-10.22-92.86-17-23.36-9-40-19.88-57.58-37.29s-28.38-34.11-37.5-57.42c-6.85-17.64-15.1-44.08-17.38-92.83-2.48-52.69-3-68.51-3.29-202s.22-149.29,2.53-202c2.08-48.71,10.23-75.21,17-92.84,9-23.39,19.84-40,37.29-57.57s34.1-28.39,57.43-37.51c17.62-6.88,44.06-15.06,92.79-17.38,52.73-2.5,68.53-3,202-3.29s149.31.21,202.06,2.53c48.71,2.12,75.22,10.19,92.83,17,23.37,9,40,19.81,57.57,37.29s28.4,34.07,37.52,57.45c6.89,17.57,15.07,44,17.37,92.76,2.51,52.73,3.08,68.54,3.32,202s-.23,149.31-2.54,202c-2.13,48.75-10.21,75.23-17,92.89-9,23.35-19.85,40-37.31,57.56s-34.09,28.38-57.43,37.5c-17.6,6.87-44.07,15.07-92.76,17.39-52.73,2.48-68.53,3-202.05,3.29s-149.27-.25-202-2.53m407.6-674.61a60,60,0,1,0,59.88-60.1,60,60,0,0,0-59.88,60.1M245.77,503c.28,141.8,115.44,256.49,257.21,256.22S759.52,643.8,759.25,502,643.79,245.48,502,245.76,245.5,361.22,245.77,503m90.06-.18a166.67,166.67,0,1,1,167,166.34,166.65,166.65,0,0,1-167-166.34"></path></svg>
                                             </a>
                                         </li>
@@ -150,24 +122,23 @@ class Home extends Component {
 
                                         <ul class="duties">
                                             <div style={{float: "left", marginRight: "50px"}}>
-                                                        <li class="listItem">C</li>
-                                                        <li class="listItem">C#</li>
+                                                <li class="listItem">C</li>
+                                                <li class="listItem">C#</li>
+                                                <li class="listItem">Java</li>
                                             </div>
                                             <div style={{float: "left", marginRight: "50px"}}>
-                                                         <li class="listItem">Java</li>
-                                                        <li class="listItem">SQL</li>
+                                                <li class="listItem">Mongo</li>
+                                                <li class="listItem">SQL</li>
+                                                <li class="listItem">Python</li>
                                             </div>
                                             <div style={{float: "left", marginRight: "50px"}}>
-                                                        <li class="listItem">Javascript</li>
-                                                        <li class="listItem">Typescript</li>
-                                            </div>
-                                            <div style={{float: "left", marginRight: "50px"}}>
-                                                        <li class="listItem">Mongo</li>
-                                                        <li class="listItem">Python</li>
-                                            </div>
-                                            <div style={{float: "left", marginRight: "50px"}}>
+                                                <li class="listItem">Javascript</li>
+                                                <li class="listItem">Typescript</li>
                                                 <li class="listItem">Spring Boot</li>
+                                            </div>
+                                            <div style={{float: "left", marginRight: "50px"}}>
                                                 <li class="listItem">Git</li>
+                                                <li class="listItem">AWS</li>
                                             </div>
                                         </ul>
                                     </div>
