@@ -72,7 +72,7 @@ const Home = () => {
 
         document.getElementById(id).classList.toggle('fade-enter-active');
 
-        this.state.currentJobTab = id;
+        setCurrentJobTab(id);
     }
 
     return (
