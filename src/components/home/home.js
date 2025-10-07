@@ -90,7 +90,7 @@ const Home = () => {
                             <h2 class="home-header-1">Hi, my name is</h2>
                             <div class="home">
                                 <div >
-                                    <h2 class="home-header-2">Matt Weinert,</h2>
+                                    <h2 class="home-header-2">Matt Weinert</h2>
                                     <h2 class="home-header-1">and I program things.</h2>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@ const Home = () => {
                                     <div class="tabular">
                                         <div id="tabHeader">
                                         </div>
-                                            <button id="BNYMButton" class="workButton" style={{color: '#08fdd8'}} onClick={() => workButtonClicked("BNYM")}><span class="buttonText">BNY Mellon</span></button>
+                                            <button id="BNYMButton" class="workButton" style={{color: '#08fdd8'}} onClick={() => workButtonClicked("BNYM")}><span class="buttonText">BNY</span></button>
                                             <button id="FourCStrategiesButton" class="workButton" onClick={() => workButtonClicked("FourCStrategies")}>4c Strategies</button>
                                             <button id="PhoenixDefenseButton" class="workButton" onClick={() => workButtonClicked("PhoenixDefense")}>Phoenix Defense</button>
                                             <button id="DignitasTechnologiesButton" class="workButton" onClick={() => workButtonClicked("DignitasTechnologies")}>Dignitas Technologies</button>
@@ -340,7 +340,7 @@ const Home = () => {
 
             <div class="footer" id="footer">
                 <div class="section">
-                    <div class="body" style={{backgroundColor: "rgba(0,0,0,0)", minHeight: "60px"}}>
+                    <div class="body" style={{backgroundColor: "rgba(0,0,0,0)", minHeight: "60px", margin: "auto"}}>
                         <footer>
                             <a href="https://github.com/MattRayWeinert/mw" class="footer-href" target="_blank">
                                 <div>
