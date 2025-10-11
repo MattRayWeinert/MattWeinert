@@ -3,6 +3,7 @@ import './home.css';
 import resume from '../../assets/resume.pdf';
 import twoters from '../../assets/twoters.png';
 import dodge from '../../assets/dodge.png';
+import camera from '../../assets/camera.png';
 import { useInView } from 'react-intersection-observer';
 
 const Home = () => {
@@ -267,57 +268,85 @@ const Home = () => {
                         <div class="section">
                             <div style={{width: "950px"}}>
                             <h2 class="section-heading">Portfolio</h2>
-                                    <ul class="proj-list">
-                                        <li class="proj-list-item">
+                                <ul class="proj-list">
+                                    <li class="proj-list-item">
+                                        <a href="https://www.ece.ucf.edu/seniordesign/sp2022su2022/g14/" target="_blank">
                                             <div class="project">
-                                                <div class="content-left">
-                                                    <div>
-                                                        <p class="proj-overline">Personal Project</p>
-                                                        <h3 class="proj-header">Twoters</h3>
+                                                <div>
+                                                    <div class="proj-info-container">
+                                                        <img src={camera} class="proj-image"/>
                                                         <div class="proj-desc">
-                                                            Developed a website that helps college students to learn, teach and study together. The website uses a MERN stack with Axios acting as the middleware. The website handles account registration with a login/logout system. Users can currently edit their user profile settings, create posts and search for posts along with logging out with potential to add more features in the future.
-                                                        </div>
-                                                        <ul class="proj-stack-left">
-                                                            <li class="stack-li-item">React</li>
-                                                            <li class="stack-li-item">Mongo</li>
-                                                            <li class="stack-li-item">Express</li>
-                                                            <li class="stack-li-item">Node</li>
-                                                        </ul>
-                                                        <div class="proj-links-left">
-                                                            <a class="github-proj-link" href="https://github.com/MattRayWeinert/Twoters2" target="_blank" style={{width: "20px"}}><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                                                            <div style={{display: "flex"}}>
+                                                                <h3 class="proj-header">Smart Surveillance Hub</h3>
+                                                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                                                            </div>
+                                                            <span>
+                                                                Engineered and built a security system that detects people, records video feeds, and sends real‑time alerts
+                                                                to owners when alarms are triggered; designed and implemented the full user interface for storing and replaying recorded footage.                                                            </span>
+                                                            <ul class="proj-stack-left">
+                                                                <li class="stack-li-item">Python</li>
+                                                                <li class="stack-li-item">HTML/CSS</li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="proj-images-right">
-                                                    <img src={twoters} class="proj-image"/>
-                                                </div>
                                             </div>
-                                        </li>
+                                        </a>
+                                    </li>
 
-                                        <li class="proj-list-item">
+                                    <li class="proj-list-item">
+                                        <a href="https://github.com/MattRayWeinert/twoters" target="_blank">
                                             <div class="project">
-                                                <div class="content-left">
-                                                    <div>
-                                                        <p class="proj-overline">Personal Project</p>
-                                                        <h3 class="proj-header">Dodge</h3>
+                                                <div>
+                                                    <div class="proj-info-container">
+                                                        <img src={twoters} class="proj-image"/>
                                                         <div class="proj-desc">
-                                                            In this game, the WASD keys are used to dodge the spawning objects, every new level there are new threats and the more that the player gets hit then the more damage they will take. The goal is to stay alive longer than anyone else, doing so will grant you a lot of points! This is my first major Java based game. The engine was created using a tick FPS system. The GUI was created using the JFrame class withing Java's JDK Framework.
-                                                        </div>
-                                                        <ul class="proj-stack-left">
-                                                            <li class="stack-li-item">Java</li>
-                                                            <li class="stack-li-item">Swing</li>
-                                                        </ul>
-                                                        <div class="proj-links-left">
-                                                            <a class="github-proj-link" href="https://github.com/MattRayWeinert/Dodge" target="_blank" style={{width: "20px"}}><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                                                            <div style={{display: "flex"}}>
+                                                                <h3 class="proj-header">Twoters</h3>
+                                                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                                                            </div>
+                                                            <span>
+                                                                Built a MERN stack website for college students to learn, teach, and study collaboratively. Features include user authentication,
+                                                                profile editing, post creation/search, and Axios for API handling, with future feature expansion planned.                                                           
+                                                            </span>
+                                                            <ul class="proj-stack-left">
+                                                                <li class="stack-li-item">React</li>
+                                                                <li class="stack-li-item">Mongo</li>
+                                                                <li class="stack-li-item">Express</li>
+                                                                <li class="stack-li-item">Node</li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="proj-images-right">
-                                                    <img src={dodge} class="proj-image"/>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="proj-list-item">
+                                        <a href="https://github.com/MattRayWeinert/Dodge" target="_blank">
+                                            <div class="project">
+                                                <div>
+                                                    <div class="proj-info-container">
+                                                        <img src={dodge} class="proj-image"/>
+                                                        <div class="proj-desc">
+                                                            <div style={{display: "flex"}}>
+                                                                <h3 class="proj-header">Dodge</h3>
+                                                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                                                            </div>
+                                                            <span>
+                                                                A Java-based survival game where players use WASD to dodge increasingly dangerous obstacles each level. Damage increases with each hit, 
+                                                                and the goal is to outlast others for high scores. Built with a custom tick-based engine and a GUI using Java’s JFrame.
+                                                            </span>
+                                                            <ul class="proj-stack-left">
+                                                                <li class="stack-li-item">Java</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>                                
+                                        </a>
+                                    </li>
+                                </ul>                                
                             </div>
                         </div>
                     </div>
