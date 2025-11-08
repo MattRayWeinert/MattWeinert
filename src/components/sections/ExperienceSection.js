@@ -42,12 +42,12 @@ const ExperienceSection = ({ sectionRef, sectionStyle }) => {
                     <div className="inner">
                         <div className="tabular">
                             <div id="tabHeader"></div>
-                            {experiences.map((exp, index) => (
+                            {[...experiences].map((exp, index) => (
                                 <button
                                     key={exp.id}
                                     id={`${exp.id}Button`}
                                     className="workButton"
-                                    style={{color: index === 0 ? '#08fdd8' : '#8892b0'}}
+                                    style={{color: exp.id === currentJobTab ? '#08fdd8' : '#8892b0'}}
                                     onClick={() => workButtonClicked(exp.id)}
                                 >
                                     <span className="buttonText buttonText-full">{exp.displayName}</span>
