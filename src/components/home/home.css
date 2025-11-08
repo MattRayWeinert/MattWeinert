@@ -4,6 +4,7 @@
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .home-wrapper {
@@ -478,7 +479,7 @@ a:hover {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 42px;
     padding: 0px 20px;
     border-left: 2px solid #233554;
@@ -1151,6 +1152,126 @@ h3 {
     .carousel-nav-next {
       right: 10px;
     }
+
+    /* Work History Tablet - Horizontal Timeline */
+    .inner {
+      flex-direction: column;
+      gap: 30px;
+      overflow: visible;
+    }
+
+    .tabular {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+      margin-bottom: 0;
+      padding: 10px 0 20px;
+      background: transparent;
+      border-radius: 0;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+      overflow: visible;
+    }
+
+    .tabular::before {
+      content: "";
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      top: 20px;
+      height: 2px;
+      background: linear-gradient(to right, rgba(100, 255, 218, 0.4), rgba(100, 255, 218, 0.2));
+    }
+
+    #tabHeader {
+      display: none;
+    }
+
+    .workButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 0;
+      width: auto;
+      flex: 1;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .workButton:focus,
+    .workButton:active {
+      background: transparent;
+      outline: none;
+    }
+
+    .workButton::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      background: #0a192f;
+      border: 3px solid rgba(100, 255, 218, 0.4);
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+      margin-left: 0;
+      box-sizing: border-box;
+    }
+
+    .workButton[style*="color: rgb(8, 253, 216)"]::before {
+      background: #0a192f;
+      border-color: #08fdd8;
+      border-width: 4px;
+      box-shadow: 0 0 20px rgba(8, 253, 216, 0.6);
+      transform: scale(1.3);
+    }
+
+    .workButton:hover::before {
+      background: #0a192f;
+      border-color: rgba(100, 255, 218, 0.7);
+      border-width: 3.5px;
+      transform: scale(1.15);
+    }
+
+    .workButton[style*="color: rgb(8, 253, 216)"] {
+      color: #08fdd8;
+      font-weight: 600;
+    }
+
+    .workButton:hover {
+      color: #ccd6f6;
+    }
+
+    .buttonText {
+      white-space: nowrap;
+      font-size: 13px;
+    }
+
+    .buttonText-full {
+      display: inline;
+    }
+
+    .buttonText-short {
+      display: none;
+    }
+
+    .jobs {
+      width: 100%;
+      padding: 28px 24px;
+      background: rgba(17, 34, 64, 0.3);
+      border-radius: 12px;
+      border: 1px solid rgba(100, 255, 218, 0.15);
+    }
   }
 
   @media (max-width: 768px) {
@@ -1536,30 +1657,54 @@ h3 {
       width: 100%;
     }
 
-    /* Work Experience Mobile */
+    /* Work Experience Mobile - Horizontal Timeline */
     .experience {
       padding: 0 5px;
+      overflow: visible;
     }
 
     .section-heading {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .inner {
       flex-direction: column;
       width: 100%;
       max-width: 100%;
-      gap: 0;
+      gap: 24px;
+      overflow: visible;
     }
 
     .tabular {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-      margin-bottom: 16px;
-      padding: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+      margin-bottom: 0;
+      padding: 8px 10px 18px;
       width: 100%;
       max-width: 100%;
+      background: transparent;
+      border-radius: 0;
+      justify-content: space-between;
+      position: relative;
+      overflow-x: auto;
+      overflow-y: visible;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .tabular::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tabular::before {
+      content: "";
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      top: 17px;
+      height: 2px;
+      background: linear-gradient(to right, rgba(100, 255, 218, 0.4), rgba(100, 255, 218, 0.2));
     }
 
     #tabHeader {
@@ -1567,21 +1712,69 @@ h3 {
     }
 
     .workButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
       white-space: nowrap;
-      padding: 12px 10px;
-      width: 100%;
+      padding: 0;
+      width: auto;
+      flex: 1;
+      min-width: fit-content;
       border: none;
-      border-radius: 10px;
-      background: rgba(100, 255, 218, 0.08);
+      border-radius: 0;
+      background: transparent;
       transition: all 0.3s ease;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       text-align: center;
-      border: 2px solid transparent;
+      position: relative;
+      outline: none;
+    }
+
+    .workButton:focus,
+    .workButton:active {
+      background: transparent;
+      outline: none;
+    }
+
+    .workButton::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 50%;
+      background: #0a192f;
+      border: 3px solid rgba(100, 255, 218, 0.4);
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+      margin-left: 0;
+      box-sizing: border-box;
+    }
+
+    .workButton[style*="color: rgb(8, 253, 216)"]::before {
+      background: #0a192f;
+      border-color: #08fdd8;
+      border-width: 4px;
+      box-shadow: 0 0 20px rgba(8, 253, 216, 0.6);
+      transform: scale(1.25);
+    }
+
+    .workButton:active::before {
+      background: #0a192f;
+      border-color: rgba(100, 255, 218, 0.7);
+      border-width: 3.5px;
+      transform: scale(1.1);
+    }
+
+    .workButton[style*="color: rgb(8, 253, 216)"] {
+      color: #08fdd8;
+      font-weight: 600;
     }
 
     .buttonText {
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .buttonText-short {
@@ -1592,21 +1785,14 @@ h3 {
       display: inline;
     }
 
-    .workButton[style*="color: rgb(8, 253, 216)"] {
-      background: rgba(100, 255, 218, 0.15);
-      border-color: rgba(100, 255, 218, 0.5);
-      box-shadow: 0 0 20px rgba(8, 253, 216, 0.15);
-      transform: scale(1.02);
-    }
-
     .jobs {
       width: 100%;
       max-width: 100%;
       overflow-x: hidden;
-      padding: 18px 14px;
-      background: rgba(17, 34, 64, 0.2);
+      padding: 24px 18px;
+      background: rgba(17, 34, 64, 0.3);
       border-radius: 12px;
-      border: 1px solid rgba(100, 255, 218, 0.1);
+      border: 1px solid rgba(100, 255, 218, 0.15);
     }
 
     .job {
@@ -1614,8 +1800,8 @@ h3 {
     }
 
     .job h3 {
-      font-size: 17px;
-      margin-bottom: 6px;
+      font-size: 18px;
+      margin-bottom: 8px;
       line-height: 1.3;
     }
 
@@ -1624,25 +1810,25 @@ h3 {
     }
 
     .job h3 .company {
-      font-size: 15px;
+      font-size: 16px;
       margin-top: 0;
     }
 
     .job p {
-      font-size: 12px;
+      font-size: 13px;
       color: #8892b0;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .job .duties {
-      margin-top: 12px;
+      margin-top: 16px;
     }
 
     .job-listItem {
-      font-size: 13px;
-      line-height: 1.5;
-      margin-bottom: 10px;
-      padding-left: 6px;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      padding-left: 8px;
       word-wrap: break-word;
       overflow-wrap: break-word;
       color: #a8b2d1;
@@ -1651,7 +1837,7 @@ h3 {
     .job-listItem::before {
       color: #08fdd8;
       font-weight: bold;
-      margin-right: 6px;
+      margin-right: 8px;
     }
 
     /* Portfolio/Carousel is already responsive */
@@ -1804,14 +1990,42 @@ h3 {
       font-size: 14px;
     }
 
+    .tabular {
+      padding: 6px 8px 16px;
+    }
+
+    .tabular::before {
+      left: 20px;
+      right: 20px;
+      top: 14px;
+      height: 2px;
+    }
 
     .workButton {
-      padding: 8px 12px;
+      padding: 0;
+      gap: 8px;
       font-size: 11px;
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      outline: none;
+    }
+
+    .workButton:focus,
+    .workButton:active {
+      background: transparent;
+      outline: none;
+    }
+
+    .workButton::before {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      margin-left: 0;
+      background: #0a192f;
+      border: 3px solid rgba(100, 255, 218, 0.4);
+    }
+
+    .workButton[style*="color: rgb(8, 253, 216)"]::before {
+      border-color: #08fdd8;
+      border-width: 3.5px;
     }
 
     .buttonText {
@@ -1827,20 +2041,20 @@ h3 {
     }
 
     .jobs {
-      padding: 16px 12px;
+      padding: 20px 14px;
     }
 
     .job h3 {
-      font-size: 18px;
+      font-size: 17px;
     }
 
     .job h3 .company {
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .job p {
       font-size: 12px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .job-listItem {
