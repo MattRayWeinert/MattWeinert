@@ -40,6 +40,10 @@ html, body {
     padding: 0;
 }
 
+.about {
+    padding-top: 60px;
+}
+
 .header {
     background-color:rgba(0,0,0,0.8);
     display: flex;
@@ -1192,7 +1196,7 @@ h3 {
 
   .contact-header {
     text-align: center;
-    margin: 0px 0px 10px;
+    margin: 0px 0px 16px;
     font-weight: 600;
     color: #dddddd;
     line-height: 1.1;
@@ -1200,16 +1204,176 @@ h3 {
   }
 
   .contact-p {
-    margin: 0 auto;
+    margin: 0 auto 32px;
     width: 80%;
-    min-height: 100%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     color: #89aca7;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.5;
     text-align: center;
+  }
+
+  /* Contact Direct Link Styles */
+  .contact-direct-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .contact-divider {
+    color: #8892b0;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+  }
+
+  .contact-divider::before,
+  .contact-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background: rgba(136, 146, 176, 0.3);
+  }
+
+  .contact-divider::before {
+    right: calc(100% + 16px);
+  }
+
+  .contact-divider::after {
+    left: calc(100% + 16px);
+  }
+
+  .contact-direct-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: transparent;
+    color: #8892b0;
+    border: 2px solid #8892b0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.645,0.045,0.355,1);
+    font-weight: 500;
+  }
+
+  .contact-direct-link:hover {
+    background: rgba(136, 146, 176, 0.1);
+    color: #ccd6f6;
+    border-color: #ccd6f6;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(136, 146, 176, 0.3);
+  }
+
+  .contact-email-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .form-field label {
+    display: block;
+    margin-bottom: 6px;
+    color: #a8b2d1;
+    font-size: 12px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  }
+
+  .input,
+  .textarea {
+    width: 100%;
+    background: rgba(17, 34, 64, 0.35);
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    color: #ccd6f6;
+    border-radius: 8px;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    color: #6b7a99;
+  }
+
+  .input:focus,
+  .textarea:focus {
+    border-color: rgba(100, 255, 218, 0.5);
+    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.15);
+    background: rgba(17, 34, 64, 0.5);
+  }
+
+  .submit-btn {
+    align-self: center;
+    color: #08fdd8;
+    background-color: transparent;
+    border: 1px solid #08fdd8;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    min-width: 160px;
+  }
+
+  .submit-btn:hover:not([disabled]) {
+    background-color: rgba(100,255,218,0.1);
+  }
+
+  .submit-btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .form-status {
+    text-align: center;
+    margin-top: 4px;
+    font-size: 13px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  }
+
+  .form-status-success {
+    color: #64ffda;
+  }
+
+  .form-status-error {
+    color: #ff7b7b;
+  }
+
+  .form-status-warning {
+    color: #e6c97a;
   }
 
   footer {
@@ -1338,6 +1502,10 @@ h3 {
     }
 
     /* About Section Mobile */
+    .about {
+      padding-top: 40px;
+    }
+
     .section-heading {
       font-size: clamp(28px, 6vw, 36px);
       text-align: center;
@@ -1482,16 +1650,37 @@ h3 {
     /* Contact Section Mobile */
     .contact-header {
       font-size: clamp(32px, 7vw, 50px);
+      margin-bottom: 12px;
     }
 
     .contact-p {
       width: 95%;
       font-size: 15px;
+      margin-bottom: 24px;
     }
 
     .ext-link {
       padding: 16px 32px;
       font-size: 14px;
+    }
+
+    .contact-direct-wrapper {
+      margin-top: 24px;
+    }
+
+    .contact-divider::before,
+    .contact-divider::after {
+      width: 40px;
+    }
+
+    .contact-direct-link {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+
+    .contact-email-icon {
+      width: 18px;
+      height: 18px;
     }
 
     /* Footer Mobile */
@@ -1519,6 +1708,10 @@ h3 {
       padding: 16px;
       margin-top: 10px;
       width: 100%;
+    }
+
+    .about {
+      padding-top: 30px;
     }
 
     .carousel-container {
@@ -1648,15 +1841,56 @@ h3 {
 
     .contact-header {
       font-size: clamp(28px, 7vw, 40px);
+      margin-bottom: 10px;
     }
 
     .contact-p {
       font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .ext-link {
       padding: 14px 28px;
       font-size: 13px;
+    }
+
+    .contact-direct-wrapper {
+      margin-top: 20px;
+    }
+
+    .contact-divider {
+      font-size: 12px;
+    }
+
+    .contact-divider::before,
+    .contact-divider::after {
+      width: 30px;
+    }
+
+    .contact-direct-link {
+      padding: 11px 20px;
+      font-size: 13px;
+    }
+
+    .contact-email-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Contact form responsive */
+    .contact-form {
+      max-width: 100%;
+      margin-top: 0;
+      padding: 0 6px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .submit-btn {
+      width: 100%;
     }
 
     .section {
