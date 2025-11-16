@@ -593,6 +593,11 @@ a:hover {
     overflow-x: hidden;
   }
 
+  .tech-column {
+    float: left;
+    margin-right: 30px;
+  }
+
   .listItem {
     position: relative;
     padding-left: 30px;
@@ -1699,7 +1704,7 @@ h3 {
       gap: 10px;
     }
 
-    .duties > div {
+    .tech-column {
       float: none !important;
       margin-right: 0 !important;
       width: 100%;
