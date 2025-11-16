@@ -106,41 +106,70 @@ const PortfolioCarousel = () => {
                                 }}
                                 onClick={() => !isActive && goToSlide(index)}
                             >
-                                <a 
-                                    href={item.link} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="carousel-card-link"
-                                    onClick={(e) => !isActive && e.preventDefault()}
-                                >
-                                    <div className="carousel-card-image-wrapper">
-                                        <img 
-                                            src={item.image} 
-                                            alt={item.alt} 
-                                            className="carousel-card-image"
-                                        />
-                                        <div className="carousel-image-gradient"></div>
-                                    </div>
-                                    
-                                    <div className="carousel-card-content">
-                                        <h3 className="carousel-card-title">
-                                            {item.title}
-                                            <svg className="carousel-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path>
-                                            </svg>
-                                        </h3>
-                                        <p className="carousel-card-description">
-                                            {item.description}
-                                        </p>
-                                        <div className="carousel-tech-tags">
-                                            {item.technologies.map((tech, techIndex) => (
-                                                <span key={techIndex} className="carousel-tech-tag">
-                                                    {tech}
-                                                </span>
-                                            ))}
+                                {item.link ? (
+                                    <a 
+                                        href={item.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="carousel-card-link"
+                                        onClick={(e) => !isActive && e.preventDefault()}
+                                    >
+                                        <div className="carousel-card-image-wrapper">
+                                            <img 
+                                                src={item.image} 
+                                                alt={item.alt} 
+                                                className="carousel-card-image"
+                                            />
+                                            <div className="carousel-image-gradient"></div>
+                                        </div>
+                                        
+                                        <div className="carousel-card-content">
+                                            <h3 className="carousel-card-title">
+                                                {item.title}
+                                                <svg className="carousel-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path>
+                                                </svg>
+                                            </h3>
+                                            <p className="carousel-card-description">
+                                                {item.description}
+                                            </p>
+                                            <div className="carousel-tech-tags">
+                                                {item.technologies.map((tech, techIndex) => (
+                                                    <span key={techIndex} className="carousel-tech-tag">
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </a>
+                                ) : (
+                                    <div className="carousel-card-link">
+                                        <div className="carousel-card-image-wrapper">
+                                            <img 
+                                                src={item.image} 
+                                                alt={item.alt} 
+                                                className="carousel-card-image"
+                                            />
+                                            <div className="carousel-image-gradient"></div>
+                                        </div>
+                                        
+                                        <div className="carousel-card-content">
+                                            <h3 className="carousel-card-title">
+                                                {item.title}
+                                            </h3>
+                                            <p className="carousel-card-description">
+                                                {item.description}
+                                            </p>
+                                            <div className="carousel-tech-tags">
+                                                {item.technologies.map((tech, techIndex) => (
+                                                    <span key={techIndex} className="carousel-tech-tag">
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
-                                </a>
+                                )}
                             </div>
                         );
                     })}

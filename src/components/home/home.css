@@ -1530,6 +1530,13 @@ h3 {
     color: #e6c97a;
   }
 
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   footer {
     text-align: center;
   }
