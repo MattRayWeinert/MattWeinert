@@ -16,10 +16,10 @@ export const portfolioItems = [
         technologies: ['JavaScript', 'React', 'HTML/CSS', 'AWS']
     },
     {
-        id: 'balder',
-        title: 'Balder',
+        id: 'baldr',
+        title: 'Baldr',
         image: balder,
-        alt: 'Balder',
+        alt: 'Baldr',
         link: null,
         description: 'Futures trading algorithm for scalping trades using pandas and yfinance. Features backtesting capabilities and real-time insights. Code is private on GitHub but available upon request.',
         technologies: ['Python', 'JavaScript', 'React', 'HTML/CSS']
