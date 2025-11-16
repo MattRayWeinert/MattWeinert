@@ -10,9 +10,9 @@ export const portfolioItems = [
         title: 'Balder',
         image: balder,
         alt: 'Balder',
-        link: 'https://balder.streamlit.app',
-        description: 'Futures trading algorithm for scalping trades using pandas and yfinance. Features backtesting capabilities and real-time insights via Streamlit. (Passcode: 000)',
-        technologies: ['Python', 'HTML/CSS']
+        link: null,
+        description: 'Futures trading algorithm for scalping trades using pandas and yfinance. Features backtesting capabilities and real-time insights. Code is private on GitHub but available upon request.',
+        technologies: ['Python', 'JavaScript', 'React', 'HTML/CSS']
     },
     {
         id: 'show-market',

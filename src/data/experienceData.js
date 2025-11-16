@@ -63,6 +63,6 @@ export const technologies = [
     ['C', 'C#', 'Java'],
     ['Mongo', 'SQL', 'Python'],
     ['Javascript', 'Typescript', 'Spring Boot'],
-    ['Git', 'AWS']
+    ['Git', 'AWS', 'Agentic AI']
 ];
 

@@ -54,10 +54,9 @@ const Home = () => {
                     <ExperienceSection sectionRef={ref} sectionStyle={divStyle} />
                     <PortfolioSection sectionRef={ref2} sectionStyle={divStyle2} />
                     <ContactSection sectionRef={ref3} sectionStyle={divStyle3} />
+                    <Footer />
                 </div>
             </div>
-
-            <Footer />
         </div>
     );
 };
