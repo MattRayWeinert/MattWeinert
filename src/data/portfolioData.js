@@ -3,8 +3,18 @@ import showMarket from '../assets/show-market.png';
 import camera from '../assets/camera.png';
 import twoters from '../assets/twoters.png';
 import dodge from '../assets/dodge.png';
+import portfolio from '../assets/portfolio.png';
 
 export const portfolioItems = [
+    {
+        id: 'portfolio',
+        title: 'Portfolio Website',
+        image: portfolio,
+        alt: 'Portfolio Website',
+        link: 'https://github.com/MattRayWeinert/MattWeinert',
+        description: 'Responsive portfolio with 3D carousel, interactive timeline, and EmailJS contact form. Deployed on AWS.',
+        technologies: ['JavaScript', 'React', 'HTML/CSS', 'AWS']
+    },
     {
         id: 'balder',
         title: 'Balder',

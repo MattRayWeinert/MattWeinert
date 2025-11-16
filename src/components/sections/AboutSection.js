@@ -23,7 +23,7 @@ const AboutSection = () => {
 
                         <ul className="duties">
                             {technologies.map((techGroup, index) => (
-                                <div key={index} style={{float: "left", marginRight: "50px"}}>
+                                <div key={index} className="tech-column">
                                     {techGroup.map((tech, techIndex) => (
                                         <li key={techIndex} className="listItem">{tech}</li>
                                     ))}

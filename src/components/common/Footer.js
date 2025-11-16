@@ -6,11 +6,11 @@ const Footer = () => {
             <div className="section">
                 <div className="body" style={{backgroundColor: "rgba(0,0,0,0)", minHeight: "60px", margin: "auto"}}>
                     <footer>
-                        <a href="https://github.com/MattRayWeinert/MattWeinert" className="footer-href" target="_blank" rel="noopener noreferrer">
+                        <div className="footer-href">
                             <div>
                                 Designed & Built by Matthew Weinert
                             </div>
-                        </a>
+                        </div>
                     </footer>
                 </div>
             </div>
