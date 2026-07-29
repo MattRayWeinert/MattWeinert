@@ -7,40 +7,40 @@ import portfolio from '../assets/portfolio.png';
 
 export const portfolioItems = [
     {
-        id: 'portfolio',
-        title: 'Portfolio Website',
-        image: portfolio,
-        alt: 'Portfolio Website',
-        link: 'https://github.com/MattRayWeinert/MattWeinert',
-        description: 'Responsive portfolio with 3D carousel, interactive timeline, and EmailJS contact form. Deployed on AWS.',
-        technologies: ['JavaScript', 'React', 'HTML/CSS', 'AWS']
+        id: 'surveillance',
+        title: 'Smart-Hub Security System',
+        image: camera,
+        alt: 'Smart-Hub Security System',
+        link: 'https://www.youtube.com/watch?v=HvO5HcZntn8',
+        description: 'Multidisciplinary IoT smart-hub on Raspberry Pi with OpenCV human detection, MicroPython sensors, and a PyQt5 desktop UI for real-time monitoring and alerts.',
+        technologies: ['Python', 'OpenCV', 'PyQt5', 'Raspberry Pi', 'MicroPython']
+    },
+    {
+        id: 'exas',
+        title: 'Exas',
+        image: showMarket,
+        alt: 'Exas CRM / Field Service platform',
+        link: null,
+        description: 'Full-stack CRM and Field Service Management platform connecting consumers with local businesses. React Native mobile apps for iOS/Android with Spring Boot REST APIs and AWS cloud infrastructure.',
+        technologies: ['React Native', 'Spring Boot', 'TypeScript', 'Java', 'AWS']
     },
     {
         id: 'baldr',
         title: 'Baldr',
         image: balder,
-        alt: 'Baldr',
+        alt: 'Baldr trading interface',
         link: null,
-        description: 'Futures trading algorithm for scalping trades using pandas and yfinance. Features backtesting capabilities and real-time insights. Code is private on GitHub but available upon request.',
-        technologies: ['Python', 'JavaScript', 'React', 'HTML/CSS']
+        description: 'Futures trading and backtesting tool with multi-timeframe indicators, EMA analysis, and real-time market insights. Built with Python (pandas/yfinance) and a React front end. Code available on request.',
+        technologies: ['Python', 'React', 'JavaScript', 'pandas']
     },
     {
-        id: 'show-market',
-        title: 'Show Market',
-        image: showMarket,
-        alt: 'Show Market',
-        link: 'https://github.com/MattRayWeinert/show-market',
-        description: 'Local marketplace app with user accounts and item listings. Features JWT authentication, Docker containerization, and React frontend with Spring Boot backend.',
-        technologies: ['JavaScript', 'React', 'Java', 'Spring Boot', 'SQL']
-    },
-    {
-        id: 'surveillance',
-        title: 'Smart Surveillance Hub',
-        image: camera,
-        alt: 'Smart Surveillance Hub',
-        link: 'https://www.ece.ucf.edu/seniordesign/sp2022su2022/g14/',
-        description: 'Security system with person detection, video recording, and real-time alerts. Includes a full UI for storing and replaying footage.',
-        technologies: ['Python', 'HTML/CSS']
+        id: 'portfolio',
+        title: 'Portfolio Website',
+        image: portfolio,
+        alt: 'Portfolio Website',
+        link: 'https://github.com/MattRayWeinert/MattWeinert',
+        description: 'Personal portfolio with a terminal-inspired UI, interactive Q&A assistant grounded in experience data, and EmailJS contact. Deployed at mattweinert.com.',
+        technologies: ['React', 'JavaScript', 'CSS', 'EmailJS']
     },
     {
         id: 'twoters',
@@ -48,8 +48,8 @@ export const portfolioItems = [
         image: twoters,
         alt: 'Twoters',
         link: 'https://github.com/MattRayWeinert/twoters',
-        description: 'MERN stack collaborative learning platform for students. Features authentication, profiles, post creation, and search functionality.',
-        technologies: ['React', 'Mongo', 'Express', 'Node']
+        description: 'MERN stack collaborative learning platform for students with authentication, profiles, posts, and search.',
+        technologies: ['React', 'MongoDB', 'Express', 'Node']
     },
     {
         id: 'dodge',
@@ -57,8 +57,7 @@ export const portfolioItems = [
         image: dodge,
         alt: 'Dodge',
         link: 'https://github.com/MattRayWeinert/Dodge',
-        description: 'Survival game where players dodge increasingly dangerous obstacles. Built with a custom tick-based engine and Java JFrame GUI.',
+        description: 'Survival game with a custom tick-based engine and Java JFrame GUI where players dodge increasingly dangerous obstacles.',
         technologies: ['Java']
     }
 ];
-

@@ -4,14 +4,14 @@ export const experiences = [
         company: 'BNY',
         displayName: 'BNY',
         shortName: 'BNY',
-        position: 'Full-Stack Engineer',
-        period: 'Febuary \'22 - Present',
+        position: 'Senior Associate — Full Stack App Developer',
+        period: "February 2023 – Present",
+        lineDate: "2023",
+        tags: ['Angular', 'Spring Boot', 'AI Agents', 'Kubernetes'],
         duties: [
-            'Recreated an entire web application based off a legacy application that is responsible for securing over 18 trillion USD worth of securities daily.',
-            'Developed a range of data visualization tools to support strategic decision-making at the executive level.',
-            'Leveraged AI to develop solutions that modernized workflows for production and operations teams.',
-            'Developed AI-powered external financial applications sold to clients, with patents currently pending.',
-            'The technologies used for development was Typescript via Angular along with Springboot as the middleware and Java for the backend with a relational SQL database; development tools such as IntelliJ, RapidSQL and Putty.'
+            'Built end-to-end AI apps on Eliza (BNY’s AI platform)—agents, workflow automation, and executive-facing financial tools with 100%+ productivity gains.',
+            'Shipped full-stack Angular/TypeScript + Spring Boot/Java 17 applications with CI/CD on GitLab, Docker, Kubernetes, and AppEngine.',
+            'Co-invented a patented scenario-based financial modeling solution; mentored two intern teams and interviewed 100+ engineering candidates.',
         ],
         tabOffset: 0
     },
@@ -21,11 +21,13 @@ export const experiences = [
         displayName: '4c Strategies',
         shortName: '4c Strat.',
         position: 'Software Engineer',
-        period: 'May \'22 - Febuary \'23',
+        period: "May 2022 – February 2023",
+        lineDate: "2022",
+        tags: ['Angular', 'STE', 'Wargaming', 'MySQL'],
         duties: [
-            'Developed a training solution that integrated with a Synthetic Training Environment (STE) that created, tracked and managed simulations.',
-            'Worked alongsided a cluster of small teams with an agile development process using Git and Gitlab.',
-            'The development tech stack consisted of Java, Typecript and MySQL; development tools such as Webstorm, VS Code, Eclipse, Git Bash and SQL Management Studio.'
+            'Designed and built a full-stack app for the U.S. Army’s portable Synthetic Training Environment (STE) using Angular, TypeScript, Spring Boot, and MySQL.',
+            'Modernized the U.S. Marines Wargaming platform—new features, defect fixes, and performance improvements.',
+            'Owned architecture and technical docs while collaborating with product owners and government stakeholders in Agile Scrum.',
         ],
         tabOffset: 42
     },
@@ -34,12 +36,14 @@ export const experiences = [
         company: 'Phoenix Defense',
         displayName: 'Phoenix Defense',
         shortName: 'Phoenix',
-        position: 'Software Engineer',
-        period: 'May 21\' - May 22\'',
+        position: 'Jr. Software Engineer',
+        period: "May 2021 – May 2022",
+        lineDate: "2021",
+        tags: ['ATAK', 'Mesh IoT', 'Spring Boot', 'Angular'],
         duties: [
-            'Supported development on two different contracts, which both were developed with an agile process.',
-            'The first being a GPS training application which was an anadroid application that linked with a radio using peer-to-peer architecture; this utililzed a NoSQL database and Kotlin along with Git and Bitbucket.',
-            'The ladder was a database management system application to track large amounts of data; this was done so with Java, SpringBoot, SQL and Typescript along with TortiseSVN and BitBucket.'
+            'Led an ATAK-integrated Land Navigation app with peer-to-peer mesh networking for field location tracking without centralized infrastructure.',
+            'Added Google Maps geospatial views for live personnel, routes, and operational data.',
+            'Architected an enterprise asset-management system (Spring Boot + Angular) with RBAC and warranty automation across military installations.',
         ],
         tabOffset: 84
     },
@@ -48,21 +52,21 @@ export const experiences = [
         company: 'Dignitas Technologies',
         displayName: 'Dignitas Technologies',
         shortName: 'Dignitas',
-        position: 'Software Engineer',
-        period: 'July 19\' - April 20\'',
+        position: 'Software Engineer Intern',
+        period: "July 2019 – April 2020",
+        lineDate: "2019",
+        tags: ['Java', 'SQL', 'GWT', 'Simulations'],
         duties: [
-            'Constructed and developed a web application training tool that was used by the Army to construct information timelines for the purpose of teaching.',
-            'Interfaced with different support staff to test the software, fix bugs, create features along with unit testing and creating technical notes.',
-            'The development of this required an agile process along with the use of Java, XML, HTML, CSS and GWT.'
+            'Built Java/SQL/GWT tools that ingested and validated multi-source data for military training simulations.',
+            'Ran field QA in operational training environments—logged defects in Jira and verified fixes before release.',
         ],
         tabOffset: 126
     }
 ];
 
 export const technologies = [
-    ['C', 'C#', 'Java'],
-    ['Mongo', 'SQL', 'Python'],
-    ['Javascript', 'Typescript', 'Spring Boot'],
-    ['Git', 'AWS', 'Agentic AI']
+    ['Java', 'TypeScript', 'JavaScript', 'SQL', 'Python', 'Kotlin'],
+    ['Spring Boot', 'Angular', 'React', 'React Native', 'Ionic'],
+    ['Agentic AI', 'LLM Integration', 'Oracle', 'MySQL', 'MongoDB'],
+    ['Docker', 'Kubernetes', 'GitLab CI/CD', 'AWS', 'Git']
 ];
-

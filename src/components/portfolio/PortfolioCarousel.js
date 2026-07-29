@@ -70,10 +70,6 @@ const PortfolioCarousel = () => {
 
     return (
         <div className="carousel-container">
-            <div className="carousel-header">
-                <h2 className="section-heading">Featured Projects</h2>
-            </div>
-
             <div 
                 className="carousel-wrapper"
                 ref={carouselRef}
