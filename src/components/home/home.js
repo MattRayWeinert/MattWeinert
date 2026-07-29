@@ -54,7 +54,7 @@ const Home = () => {
                     <div className="hero-copy">
                         <p className="eyebrow"><i /> SENIOR ENGINEER · FULL STACK · APPLICATION DEVELOPER</p>
                         <h1><span>$</span> hi, I&apos;m <strong>Matt.</strong></h1>
-                        <p className="role">fullStackEngineer <b>|</b> UCF Computer Engineering</p>
+                        <p className="role">Full Stack Engineer <b>|</b> UCF Computer Engineering</p>
                         <p className="hero-description">
                             I design and ship <em>AI-powered full-stack applications</em> at BNY—Angular and Spring Boot systems,
                             production AI agents, and executive-facing tools that turn complex financial data into decisions.
@@ -66,7 +66,7 @@ const Home = () => {
                         </div>
                         <div className="social-quicklinks">
                             <a href="https://github.com/MattRayWeinert" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                            <a href="https://www.linkedin.com/in/matthew-weinert-37b47b170/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                            <a href="https://www.linkedin.com/in/matt-weinert/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
                         </div>
                     </div>
                     <PortfolioAssistant />
@@ -145,10 +145,10 @@ const Home = () => {
                         <a className="email-link" href="mailto:MatthewRaymondWeinert@gmail.com">MatthewRaymondWeinert@gmail.com <span>→</span></a>
                         <p className="contact-detail">
                             status&nbsp; <b>open to conversations</b><br />
-                            location&nbsp; Pittsburgh, PA<br />
+                            location&nbsp; Orlando, FL<br />
                             email&nbsp; <a href="mailto:MatthewRaymondWeinert@gmail.com">MatthewRaymondWeinert@gmail.com</a><br />
                             github&nbsp; <a href="https://github.com/MattRayWeinert" target="_blank" rel="noopener noreferrer">MattRayWeinert</a><br />
-                            linkedin&nbsp; <a href="https://www.linkedin.com/in/matthew-weinert-37b47b170/" target="_blank" rel="noopener noreferrer">/in/matthew-weinert</a>
+                            linkedin&nbsp; <a href="https://www.linkedin.com/in/matt-weinert/" target="_blank" rel="noopener noreferrer">/in/matt-weinert</a>
                         </p>
                     </div>
                     <form ref={formRef} className="contact-form" onSubmit={handleSubmit} noValidate>

@@ -325,8 +325,8 @@ const PortfolioAssistant = () => {
             return [
                 'email     MatthewRaymondWeinert@gmail.com',
                 'github    MattRayWeinert',
-                'linkedin  /in/matthew-weinert',
-                'location  Pittsburgh, PA',
+                'linkedin  /in/matt-weinert',
+                'location  Orlando, FL',
                 '',
                 'tip: cd contact   or   contact --help',
             ].join('\n');
@@ -506,7 +506,7 @@ const PortfolioAssistant = () => {
                     kind: 'output',
                     text: [
                         'Matt Weinert · Full Stack App Developer @ BNY',
-                        'UCF B.S. Computer Engineering · Pittsburgh, PA',
+                        'UCF B.S. Computer Engineering · Orlando, FL',
                         'Builds AI-powered Angular/Spring Boot apps, agents, and executive tools.',
                         'Earlier: training systems at 4c Strategies, Phoenix Defense, and Dignitas.',
                     ].join('\n'),
@@ -579,7 +579,7 @@ const PortfolioAssistant = () => {
                 break;
 
             case 'linkedin':
-                window.open('https://www.linkedin.com/in/matthew-weinert-37b47b170/', '_blank', 'noopener,noreferrer');
+                window.open('https://www.linkedin.com/in/matt-weinert/', '_blank', 'noopener,noreferrer');
                 await typeOut({ kind: 'output', text: 'opening LinkedIn …' });
                 break;
 
