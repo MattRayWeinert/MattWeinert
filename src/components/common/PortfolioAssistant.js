@@ -547,7 +547,7 @@ const PortfolioAssistant = () => {
                     kind: 'output',
                     text: [
                         'Smart-Hub   Raspberry Pi + OpenCV + PyQt5 security hub',
-                        'Exas        React Native CRM/FSM + Spring Boot + AWS',
+                        'Skedit      React Native CRM/FSM + Spring Boot + AWS',
                         'Baldr       futures trading / backtesting (Python + React)',
                         '',
                         'tip: cd projects',

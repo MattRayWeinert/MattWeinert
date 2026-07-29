@@ -85,7 +85,11 @@ const Home = () => {
                                 <div className="project-tags">
                                     {project.technologies.slice(0, 4).map((technology) => <span key={technology}>{technology}</span>)}
                                 </div>
-                                {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">↗ view project</a>}
+                                {project.link && (
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                        ↗ {project.linkLabel || 'view project'}
+                                    </a>
+                                )}
                             </article>
                         ))}
                     </div>

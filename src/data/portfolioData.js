@@ -16,11 +16,12 @@ export const portfolioItems = [
         technologies: ['Python', 'OpenCV', 'PyQt5', 'Raspberry Pi', 'MicroPython']
     },
     {
-        id: 'exas',
-        title: 'Exas',
+        id: 'skedit',
+        title: 'Skedit',
         image: showMarket,
-        alt: 'Exas CRM / Field Service platform',
-        link: null,
+        alt: 'Skedit CRM / Field Service platform',
+        link: 'https://www.skedit.app',
+        linkLabel: 'view app',
         description: 'Full-stack CRM and Field Service Management platform connecting consumers with local businesses. React Native mobile apps for iOS/Android with Spring Boot REST APIs and AWS cloud infrastructure.',
         technologies: ['React Native', 'Spring Boot', 'TypeScript', 'Java', 'AWS']
     },
