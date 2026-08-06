@@ -1,6 +1,7 @@
 {
   "name": "mw",
   "version": "0.2.0",
+  "homepage": ".",
   "engines": {
     "npm": "8.15.1",
     "node": "16.17.1"
