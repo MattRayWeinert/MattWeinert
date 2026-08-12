@@ -81,7 +81,7 @@ const HeroSection = () => {
                         Matt
                         <span className="hero-name-break">Weinert</span>
                     </h1>
-                    <p className="hero-headline">Full-stack software engineer</p>
+                    <p className="hero-headline">Full-stack software developer</p>
                     <p className="hero-lede">
                         Building reliable products, clear interfaces, and systems that scale.
                     </p>

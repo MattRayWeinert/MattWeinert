@@ -127,7 +127,7 @@ const PortfolioAssistant = () => {
     const inputRef = useRef(null);
     const listRef = useRef(null);
     const typingTimerRef = useRef(null);
-    const cancelledRef = useRef(false);
+    const typingGenRef = useRef(0);
     const reduceMotionRef = useRef(false);
 
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -144,17 +144,20 @@ const PortfolioAssistant = () => {
         scrollToBottom();
     }, [lines]);
 
-    useEffect(() => () => {
-        cancelledRef.current = true;
-        if (typingTimerRef.current) {
-            window.clearInterval(typingTimerRef.current);
-        }
-    }, []);
-
     const stopTyping = () => {
         if (typingTimerRef.current) {
             window.clearInterval(typingTimerRef.current);
             typingTimerRef.current = null;
+        }
+    };
+
+    const abortTyping = ({ resetLines = false } = {}) => {
+        typingGenRef.current += 1;
+        stopTyping();
+        if (resetLines) {
+            setLines([]);
+        } else {
+            setLines((existing) => existing.filter((line) => line.complete !== false));
         }
     };
 
@@ -179,6 +182,10 @@ const PortfolioAssistant = () => {
 
         if (!items.length) return Promise.resolve();
 
+        // Drop any orphan incomplete lines from an aborted session, then start fresh.
+        abortTyping();
+        const gen = typingGenRef.current;
+
         if (reduceMotionRef.current) {
             setLines((current) => [
                 ...current,
@@ -196,15 +203,19 @@ const PortfolioAssistant = () => {
         return new Promise((resolve) => {
             let itemIndex = 0;
 
+            const isStale = () => gen !== typingGenRef.current;
+
             const finishAll = () => {
-                stopTyping();
-                setBusy(false);
-                window.setTimeout(() => inputRef.current?.focus(), 0);
+                if (!isStale()) {
+                    stopTyping();
+                    setBusy(false);
+                    window.setTimeout(() => inputRef.current?.focus(), 0);
+                }
                 resolve();
             };
 
             const startItem = () => {
-                if (cancelledRef.current) {
+                if (isStale()) {
                     finishAll();
                     return;
                 }
@@ -231,8 +242,9 @@ const PortfolioAssistant = () => {
                 let charIndex = 0;
                 stopTyping();
                 typingTimerRef.current = window.setInterval(() => {
-                    if (cancelledRef.current) {
+                    if (isStale()) {
                         stopTyping();
+                        setLines((existing) => existing.filter((line) => line.id !== current.id));
                         resolve();
                         return;
                     }
@@ -263,8 +275,16 @@ const PortfolioAssistant = () => {
 
     useEffect(() => {
         reduceMotionRef.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        cancelledRef.current = false;
-        typeOut(BOOT_LINES);
+        // Defer boot so React Strict Mode's immediate effect cleanup doesn't leave an
+        // empty incomplete line with a blinking caret in the top-left of the shell.
+        const bootTimer = window.setTimeout(() => {
+            typeOut(BOOT_LINES);
+        }, 0);
+        return () => {
+            window.clearTimeout(bootTimer);
+            abortTyping({ resetLines: true });
+            setBusy(true);
+        };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -310,9 +330,11 @@ const PortfolioAssistant = () => {
         const key = section.replace(/^\.\//, '').replace(/\/$/, '').toLowerCase();
 
         if (key === 'projects') {
-            return portfolioItems.slice(0, 3).map((project, index) => (
-                `${String(index + 1).padStart(2, '0')}  ${project.title}`
-            )).join('\n') + '\n\ntip: cd projects';
+            return portfolioItems
+                .filter((project) => project.featured)
+                .map((project, index) => (
+                    `${String(index + 1).padStart(2, '0')}  ${project.title}`
+                )).join('\n') + '\n\ntip: cd projects';
         }
 
         if (key === 'experience') {
@@ -533,9 +555,9 @@ const PortfolioAssistant = () => {
                     kind: 'output',
                     text: [
                         'BNY                  Senior Associate — Full Stack App Developer   2023–Present',
-                        '4c Strategies        Software Engineer                             2022–2023',
-                        'Phoenix Defense      Jr. Software Engineer                         2021–2022',
-                        'Dignitas Technologies Software Engineer Intern                     2019–2020',
+                        '4c Strategies        Software Developer                            2022–2023',
+                        'Phoenix Defense      Jr. Software Developer                        2021–2022',
+                        'Dignitas Technologies Software Developer Intern                    2019–2020',
                         '',
                         'tip: cd experience',
                     ].join('\n'),
@@ -546,9 +568,14 @@ const PortfolioAssistant = () => {
                 await typeOut({
                     kind: 'output',
                     text: [
-                        'Smart-Hub   Raspberry Pi + OpenCV + PyQt5 security hub',
-                        'Skedit      React Native CRM/FSM + Spring Boot + AWS',
-                        'Baldr       futures trading / backtesting (Python + React)',
+                        ...portfolioItems
+                            .filter((project) => project.featured)
+                            .map((project) => {
+                                const label = project.title.length > 12
+                                    ? project.title.slice(0, 12)
+                                    : project.title.padEnd(12, ' ');
+                                return `${label} ${project.technologies.slice(0, 3).join(' · ')}`;
+                            }),
                         '',
                         'tip: cd projects',
                     ].join('\n'),
@@ -584,10 +611,7 @@ const PortfolioAssistant = () => {
                 break;
 
             case 'clear':
-                cancelledRef.current = true;
-                stopTyping();
-                cancelledRef.current = false;
-                setLines([]);
+                abortTyping({ resetLines: true });
                 setBusy(false);
                 break;
 

@@ -9,13 +9,13 @@ const AboutSection = () => {
                     <p className="section-index">01</p>
                     <h2 className="section-heading">About</h2>
                     <p className="section-support">
-                        Engineer by craft, builder by instinct.
+                        Developer by craft, builder by instinct.
                     </p>
                 </div>
 
                 <div className="about-copy">
                     <p>
-                        I'm a full-stack software engineer with over 5 years of experience, passionate about coding since high school. I enjoy solving complex problems and building software that's both practical and well-designed—across front-end interfaces and back-end systems.
+                        I'm a full-stack software developer with over 5 years of experience, passionate about coding since high school. I enjoy solving complex problems and building software that's both practical and well-designed—across front-end interfaces and back-end systems.
                     </p>
                     <p>
                         At BNY, I develop full-stack solutions to modernize legacy workflows, build dashboards that help executives make data-driven decisions, and manage releases for smooth deployments. I also focus on automation to improve development speed and maintain high code quality.
