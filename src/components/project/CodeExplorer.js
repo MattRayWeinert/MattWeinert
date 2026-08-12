@@ -79,6 +79,7 @@ const TreeNode = ({
                 onClick={() => onSelectFile(node.path)}
                 title={node.path}
                 role="treeitem"
+                aria-selected={node.path === activePath}
             >
                 <span className="tree-file-mark" aria-hidden="true" />
                 <span className="tree-label">{node.name}</span>
@@ -97,6 +98,7 @@ const TreeNode = ({
                 style={{ '--depth': depth }}
                 onClick={() => onToggle(node.path)}
                 aria-expanded={isOpen}
+                aria-selected={false}
                 title={node.path || 'root'}
                 role="treeitem"
             >
