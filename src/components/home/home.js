@@ -62,6 +62,10 @@ const Home = () => {
     }, [shellOpen]);
 
     useEffect(() => {
+        if (isMobile) setShellOpen(false);
+    }, [isMobile]);
+
+    useEffect(() => {
         const hash = window.location.hash.replace('#', '');
         if (!hash) return undefined;
         const target = document.getElementById(hash);
